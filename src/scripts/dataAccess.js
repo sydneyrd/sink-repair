@@ -23,13 +23,13 @@ export const getRequests = () => {
 }
 //gets list of plumbre
 export const getPlumbers = () => {
-    return applicationState.plumbers.map(plumbers => ({...plumbers }))
+    return applicationState.plumbers.map(plumbers => ({ ...plumbers }))
 }
 
 //this requests permaent status for the transient object
 export const sendRequest = (userServiceRequest) => {
     const fetchOptions = {
-        method: "POST", //tell api you're doing something new
+        method: "POST", //tell api you're creating something new
         headers: {
             "Content-Type": "application/json"
         },
@@ -41,8 +41,35 @@ export const sendRequest = (userServiceRequest) => {
             mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
         })
 
-    
 }
+
+export const fetchCompletions = () => {
+    return fetch(`${API}/plumbers`)
+    .then(response => response.json()
+    .then(
+        (data) => {
+            applicationState.completions = data
+        }
+    ))
+}
+
+export const saveCompletions = (completionObj) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(completionObj)
+    }
+
+    return fetch(`${API}/completions`, fetchOptions)
+        .then(response => response.json())
+        .then(() => {
+            mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+        })
+}
+
+
 export const deleteRequest = (id) => {
     return fetch(`${API}/requests/${id}`, { method: "DELETE" })  //tell api delete the object with this id
         .then(
