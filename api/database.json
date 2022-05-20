@@ -1,13 +1,55 @@
 {
-    "plumbers": [],
-    "completions": [],
-    "requests": [
-        {
-            "id": 1,
-            "description": "Aut sint voluptatem fugit eius quas molestiae modi.",
-            "address": "34445 Bianka Ports",
-            "budget": 400,
-            "neededBy": "2021-08-27"
-        }
-    ]
+  "plumbers": [
+    {
+      "id": 1,
+      "name": "Maude"
+    },
+    {
+      "id": 1,
+      "name": "Harold"
+    },
+    {
+      "id": 3,
+      "name": "Alice" 
+    },
+    {
+      "id": 4,
+      "name": "Frankenfurter"
+    },
+    {
+      "id": 5,
+      "name": "Barbara"
+    }
+  ],
+  "completions": [],
+  "requests": [
+    {
+      "id": 1,
+      "description": "Aut sint voluptatem fugit eius quas molestiae modi.",
+      "address": "34445 Bianka Ports",
+      "budget": 400,
+      "neededBy": "2021-08-27"
+    },
+    {
+      "description": "fs",
+      "address": "fs",
+      "budget": "5",
+      "neededBy": "2022-05-13",
+      "id": 3
+    },
+    {
+      "description": "hgfh",
+      "address": "hgfhg",
+      "budget": "5",
+      "neededBy": "2022-06-11",
+      "id": 4
+    },
+    {
+      "description": "hgfhgdfhgfhgf",
+      "address": "hgfhgf",
+      "budget": "8",
+      "neededBy": "2022-07-01",
+      "id": 5
+    }
+  ]
 }

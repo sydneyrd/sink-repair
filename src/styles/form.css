@@ -1,0 +1,33 @@
+#submitRequest {
+    
+   padding: 10px;
+    background-color: #007ea7;
+    color: #80CED7;
+    font-size: 1rem;
+    border-radius: 7px;
+    box-shadow: 10px;
+    margin: 10px;
+    
+
+}
+
+.field {
+    display: flex;
+    font-family: "Patua One", serif;
+
+    flex-direction: column;
+    padding: 10px;
+    align-items: flex-start;
+}
+
+.input {
+    border-radius: 7px;
+    box-shadow: 10px;
+}
+
+.label {
+    font-size: larger;
+    margin: 10px;
+}
+
+/*.serviceForm*/ 
